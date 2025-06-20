@@ -1,21 +1,28 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import React from 'react';
+import {
+  Platform,
+  StyleSheet,
+  View,
+  useColorScheme,
+  KeyboardAvoidingView,
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import ChatScreen from './components/ChatScreen';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: isDarkMode ? '#000' : '#fff' }}>
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={Platform.OS === 'ios' ? 100 : 0}>
+        <View style={styles.container}>
+          <ChatScreen />
+        </View>
+      </KeyboardAvoidingView>
+    </SafeAreaView>
   );
 }
 
