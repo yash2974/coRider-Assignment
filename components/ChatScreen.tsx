@@ -163,13 +163,13 @@ export default function ChatScreen() {
 
       <View style={{ margin: 10, position: "relative" }}>
         {showPopup && (
-            <View style={{ position: "absolute", bottom: 50, right: 10, alignItems: "center", zIndex: 1 }}>
+            <View style={{ position: "absolute", bottom: 55, right: 20, alignItems: "center", zIndex: 1 }}>
                 <View
                     style={{
                         flexDirection: "row",
                         backgroundColor: "rgba(0, 128, 0, 1)",
                         borderRadius: 30,
-                        padding: 10,
+                        padding: 8,
                         gap: 12,
                     }}
                     >
