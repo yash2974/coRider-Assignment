@@ -1,97 +1,112 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Chat Screen React Native Application
 
-# Getting Started
+A cross-platform mobile chat application built with React Native that replicates the UI design shown in the assignment. The app features infinite scrolling, real-time chat interface, and works seamlessly on both Android and iOS devices.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📱 Screencast
 
-## Step 1: Start Metro
+![Chat Screen](./ScreenRecording.mp4)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+The screencast demonstrates:
+- App launching on device
+- Chat interface with messages
+- Infinite scrolling functionality
+- Smooth animations and transitions
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 🔧 Installation
 
-```sh
-# Using npm
-npm start
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/chat-app-react-native.git
+   cd chat-app-react-native
+   ```
 
-# OR using Yarn
-yarn start
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-## Step 2: Build and run your app
+3. **Install iOS dependencies** (macOS only)
+   ```bash
+   cd ios && pod install && cd ..
+   ```
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🏃‍♂️ Running the Application
 
 ### Android
+```bash
+# Start Metro bundler
+npx react-native start
 
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+# Run on Android (in a new terminal)
+npx react-native run-android
 ```
 
-### iOS
+### iOS (macOS only)
+```bash
+# Start Metro bundler
+npx react-native start
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+# Run on iOS (in a new terminal)
+npx react-native run-ios
 ```
 
-Then, and every time you update your native dependencies, run:
+## 📡 API Integration
 
-```sh
-bundle exec pod install
+The application uses the following API endpoint to fetch chat messages:
+
+```
+GET https://qa.corider.in/assignment/chat?page=0
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### API Parameters
+- `page`: Page number for pagination (starts from 0)
 
-```sh
-# Using npm
-npm run ios
 
-# OR using Yarn
-yarn ios
+
+## 🎯 Key Implementation Details
+
+### Infinite Scrolling
+- Implemented using `FlatList` with `onEndReached` prop
+- Automatically loads older messages when scrolled to the top
+- Includes loading indicators for better UX
+
+### Chat UI Components
+- **ChatHeader**: Displays trip information and member details
+- **ChatMessage**: Individual message component with avatar and timestamp
+- **MessageInput**: Bottom input field for typing messages
+
+### State Management
+- Uses React hooks (`useState`, `useEffect`) for local state management
+- Manages chat messages, loading states, and pagination
+
+## 🧪 Testing
+
+Run the test suite:
+```bash
+npm test
+# or
+yarn test
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 📦 Building for Production
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+### Android APK
+```bash
+cd android
+./gradlew assembleRelease
+```
 
-## Step 3: Modify your app
+### iOS Archive (macOS only)
+```bash
+npx react-native run-ios --configuration Release
+```
 
-Now that you have successfully run the app, let's make changes!
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 📧 Contact
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+Project Link: [https://github.com/yash2974/coRider-Assignment](https://github.com/yash2974/coRider-Assignment)
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Note**: This application was developed as part of a technical assignment.
