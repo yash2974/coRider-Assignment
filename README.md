@@ -4,7 +4,7 @@ A cross-platform mobile chat application built with React Native that replicates
 
 ## 📱 Screencast
 
-![Chat Screen](./ScreenRecording.mp4)
+![Chat Screen](./ScreenCast.gif)
 
 The screencast demonstrates:
 - App launching on device
