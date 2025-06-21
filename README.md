@@ -6,6 +6,8 @@ A cross-platform mobile chat application built with React Native that replicates
 
 ![Chat Screen](./ScreenCast.gif)
 
+(NOTE - CAPTURED ON SAMSUNG TAB A9)
+
 The screencast demonstrates:
 - App launching on device
 - Chat interface with messages
