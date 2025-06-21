@@ -13,7 +13,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import Entypo from "react-native-vector-icons/Entypo";
 import Feather from "react-native-vector-icons/Feather";
 import { Menu, MenuOptions, MenuOption, MenuTrigger } from "react-native-popup-menu";
-import Bubble from "./Bubble"; // assuming this is your chat bubble component
+import Bubble from "./Bubble"; 
 
 export default function ChatScreen() {
   type Sender = {
