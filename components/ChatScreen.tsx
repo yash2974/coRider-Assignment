@@ -80,12 +80,12 @@ export default function ChatScreen() {
           shadowRadius: 2,
         }}
       >
-        <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 16 }}>
+        <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 16, alignItems: "center" }}>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-            <MaterialCommunityIcons name="arrow-left" size={28} color="black" />
+            <MaterialCommunityIcons name="arrow-left" size={24} color="black" />
             <Text style={{ fontSize: 24, fontFamily: "Mulish-Bold" }}>Trip {name}</Text>
           </View>
-          <Feather name="edit" size={28} color="black" />
+          <Feather name="edit" size={20} color="black" />
         </View>
         <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 12 }}>
@@ -106,7 +106,7 @@ export default function ChatScreen() {
           </View>
           <Menu>
             <MenuTrigger>
-              <MaterialCommunityIcons name="dots-vertical" size={28} color="black" />
+              <MaterialCommunityIcons name="dots-vertical" size={24} color="black" />
             </MenuTrigger>
             <MenuOptions
               customStyles={{
